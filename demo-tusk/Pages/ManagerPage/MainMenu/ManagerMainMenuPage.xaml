@@ -1,0 +1,119 @@
+﻿<Page x:Class="demo_tusk.Pages.ManagerPage.MainMenu.ManagerMainMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:demo_tusk.Pages.ManagerPage.MainMenu"
+      mc:Ignorable="d"
+      d:DesignHeight="500" d:DesignWidth="900"
+      Title="ManagerMainMenuPage">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+
+        <DataGrid
+
+            Name="dataGridManager"
+            ColumnWidth="*"
+            AutoGenerateColumns="False"
+            IsReadOnly="True">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="ИД" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status.Name}" />
+                <DataGridTextColumn Header="Работник" Binding="{Binding User.LastName}" />
+                <DataGridTextColumn Header="Телефон клиента" Binding="{Binding ClientFrom.PhoneNumber}" />
+                <DataGridTextColumn Header="Дата доставки" Binding="{Binding FinishOrder}" />
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="ButtonMoreDetailsOrder" Width="130" Click="ButtonMoreDetailsOrder_Click">Подробнее</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button
+            Name="buttonCreateOrder"
+            Content="Создать заказ"
+            HorizontalAlignment="Left"
+            Margin="23,28,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Click="buttonCreateOrder_Click"
+            Height="30"
+            Width="232" />
+
+        <Button
+            Name="buttonCreateClient"
+            Content="Создать клиента"
+            HorizontalAlignment="Left"
+            Margin="23,75,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Click="buttonCreateClient_Click"
+            Height="30"
+            Width="232" />
+
+        <TextBox
+            x:Name="textBoxInputPhoneNumber"
+            HorizontalAlignment="Left"
+            Margin="278,28,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="232"
+            Height="30"
+            Grid.Row="1" />
+        <Button
+            x:Name="buttonSelectOrderOnPhoneNumber"
+            Content="Поиск заказа про номеру телефона"
+            HorizontalAlignment="Left"
+            Margin="278,75,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Click="buttonSelectOrderOnPhoneNumber_Click"
+            Height="30"
+            Width="232" />
+
+        <Button
+            x:Name="buttonChangeOrder"
+            Content="Изменить данные заказа"
+            HorizontalAlignment="Left"
+            Margin="537,75,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Click="ButtonChangeOrder_Click"
+            Height="30"
+            Width="232" />
+
+        <TextBox
+            x:Name="textBoxId"
+            HorizontalAlignment="Left"
+            Margin="537,28,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="232"
+            Height="30"
+            Grid.Row="1" />
+
+        <Button
+            x:Name="buttonBackToMenu"
+            Content="Вернуться назад"
+            HorizontalAlignment="Left"
+            Margin="537,110,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Click="buttonBackToMenu_Click"
+            Height="30"
+            Width="232" />
+
+    </Grid>
+</Page>
