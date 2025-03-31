@@ -18,7 +18,7 @@ public partial class DemoTuskDbContext : DbContext
 
     public virtual DbSet<Client> Clients { get; set; }
 
-    public virtual DbSet<Order> Orders { get; set; }
+    public virtual DbSet<Order?> Orders { get; set; }
 
     public virtual DbSet<Role> Roles { get; set; }
 

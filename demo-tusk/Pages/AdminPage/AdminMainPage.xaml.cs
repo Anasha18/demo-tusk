@@ -66,6 +66,7 @@ namespace demo_tusk.Pages.AdminPage
             textBoxFirstName.Clear(); ;
             textBoxLastName.Clear(); ;
             textBoxPhoneNumber.Clear(); ;
+            textBoxTaxNumber.Clear();
             textBoxLogin.Clear();
             textBoxPassword.Clear();
             comboBoxRole.SelectedIndex = -1;

@@ -2,6 +2,7 @@
 using demo_tusk.Model;
 using demo_tusk.PageContoller;
 using demo_tusk.Pages.AdminPage;
+using demo_tusk.Pages.ManagerPage.MainMenu;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,8 @@ namespace demo_tusk.Pages
             _login = TxbLogin.Text;
             _password = PsbPass.Password;
 
-            User user = _authentificationController.FindUserByPhonePassword(_login, _password);
+            User user = _authentificationController
+                .FindUserByPhonePassword(_login, _password);
 
             if (user != null)
             {
@@ -59,7 +61,7 @@ namespace demo_tusk.Pages
                         }
                     case "Manager":
                         {
-                            //GlobalVariables.Frame.Navigate(new ManagerPage);
+                            GlobalVariables.Frame.Navigate(new ManagerMainMenuPage());
 
                             break;
                         }

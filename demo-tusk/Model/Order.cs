@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace demo_tusk.Model;
 
-public partial class Order
+public class Order
 {
     public int Id { get; set; }
 

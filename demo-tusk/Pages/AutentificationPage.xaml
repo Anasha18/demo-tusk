@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:demo_tusk.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AutentificationPage">
+      d:DesignHeight="500" d:DesignWidth="900"
+      Title="AuthenticationPage">
 
     <Grid Background="#FFFFFF">
         <StackPanel 
@@ -22,7 +22,7 @@
                 <TextBox 
                     x:Name="TxbLogin"
                     Height="20"
-                    Text="petrushka"/>
+                    Text="tol"/>
             </GroupBox>
             <GroupBox Header="Введите пароль">
                 <PasswordBox 
