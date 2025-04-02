@@ -36,8 +36,6 @@ namespace demo_tusk.Pages.ManagerPage.MainMenu
                 .Include(s => s.Status)
                 .Include(cl => cl.ClientFrom)
                 .ToList();
-            
-            
         }
 
 
